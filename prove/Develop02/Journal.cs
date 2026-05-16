@@ -1,5 +1,5 @@
 using System.IO;
-
+using System;
 class Journal
 {
     List<JournalEntry> _journalEntries = new List<JournalEntry>();
@@ -54,5 +54,15 @@ class Journal
             _journalEntries.Add(fileLine);
         }
 
+    }
+
+    public void SetReminder()
+    {
+        Console.Write("What day should I remind you [mm/dd/yyyy]: "); // Date Format: mm/dd/yyyy
+        string reminderDay = Console.ReadLine();
+        Console.Write("What time should I remind you [HH:MM (AM/PM)]: ");
+        string reminderTime = Console.ReadLine();
+
+        Console.WriteLine($"Reminder set on {reminderDay} at {reminderTime}.");
     }
 }

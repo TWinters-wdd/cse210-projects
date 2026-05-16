@@ -16,8 +16,9 @@ class Program
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
             Console.WriteLine("4. Save");
-            Console.WriteLine("5. Quit");
-            Console.Write("[1 - 5]: ");
+            Console.WriteLine("5. Set a Reminder");
+            Console.WriteLine("6. Quit");
+            Console.Write("[1 - 6]: ");
 
             userChoice = int.Parse(Console.ReadLine());
 
@@ -42,7 +43,11 @@ class Program
             {
                 userJournal.SaveToFile();
             }
-        } while (userChoice != 5);
+            else if (userChoice == 5)
+            {
+                userJournal.SetReminder();
+            }
+        } while (userChoice != 6);
 
 
         // JournalEntry myJournalEntry = new JournalEntry();
