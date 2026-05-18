@@ -53,7 +53,6 @@ class Journal
 
             _journalEntries.Add(fileLine);
         }
-
     }
 
     public void SetReminder()
