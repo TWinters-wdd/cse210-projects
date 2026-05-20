@@ -32,8 +32,5 @@ class Program
 
             Console.WriteLine($"Fraction {i}: String: {myFraction.GetFractionString()} Decimal: {myFraction.GetDecimalValue()}");
         }
-
-
-
     }
 }
