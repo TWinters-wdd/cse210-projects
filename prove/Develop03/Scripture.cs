@@ -2,7 +2,7 @@ using System;
 
 class Scripture
 {
-    private ScriptureReference _reference = new ScriptureReference();
+    private ScriptureReference _reference;
 
     private List<Word> _words;
 
@@ -16,6 +16,28 @@ class Scripture
     {
         _reference = reference;
         _words = ConvertToList(verse);
+    }
+
+    public bool HideRandomWords()
+    {
+        int verseLength = _words.Count();
+        Random randomWord = new Random();
+
+        for (int i = 0; i < 3; i++)
+        {
+            int index = randomWord.Next(verseLength);
+
+            _words[index].Hide();
+        }
+       
+        foreach (Word word in _words)
+        {
+            if (!word.IsHidden())
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void DisplayScripture()
