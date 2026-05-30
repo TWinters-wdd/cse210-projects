@@ -22,12 +22,19 @@ class Scripture
     {
         int verseLength = _words.Count();
         Random randomWord = new Random();
+        int hiddenWords = 0;
 
-        for (int i = 0; i < 3; i++)
+        // Iterates through the list of words until it hides 3 words that aren't hidden already
+        // If a word is hidden already, it picks the next non hidden word.
+        while (hiddenWords != 4)
         {
             int index = randomWord.Next(verseLength);
 
-            _words[index].Hide();
+            if (!_words[index].IsHidden())
+            {
+                _words[index].Hide();
+                hiddenWords++;
+            }
         }
        
         foreach (Word word in _words)

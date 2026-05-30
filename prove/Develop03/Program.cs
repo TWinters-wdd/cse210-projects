@@ -12,9 +12,6 @@ class Program
 
         ScriptureReference almaVerse = new ScriptureReference("Alma", 7, 12);
         Scripture almaScripture = new Scripture(almaVerse, "And he will take upon him death, that he may loose the bands of death which bind his people; and he will take upon him their infirmities, that his bowels may be filled with mercy, according to the flesh, that he may know according to the flesh how to succor his people according to their infirmities.");
- 
-        // Console.Clear();
-        // almaScripture.DisplayScripture();
         
 
         // While loop that runs until all the words in the verse are IsHidden()
