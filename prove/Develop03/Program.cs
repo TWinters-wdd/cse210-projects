@@ -6,7 +6,7 @@ class Program
     {
 
         // 1. Console Displays the entire Scripture
-        // 2. User hits enter, and it hides 3 random words
+        // 2. User hits enter, and it hides 4 random words
         // 3. User hits enter until there is no words left
         // 4. If enter is hit when all the words are hidden, The program quits (or if 'quit' is typed in)
 
