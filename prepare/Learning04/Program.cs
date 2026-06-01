@@ -7,10 +7,13 @@ class Program
         Assignment testAssignment = new Assignment("Samuel Bennet", "Multiplication");
 
         Console.WriteLine(testAssignment.GetSummary());
+        Console.WriteLine();
+
 
         MathAssignment testMathAssignment = new MathAssignment("Roberto Rodriguez", "Fractions", "Section 7.3", "Problems 8-19");
 
         Console.WriteLine(testMathAssignment.GetSummary());
         Console.WriteLine(testMathAssignment.GetHomeworkList());
+        Console.WriteLine();
     }
 }
