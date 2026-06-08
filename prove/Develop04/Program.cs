@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        Activity myActivity = new Activity("Breathing Activity", "Activity Description");
+
+        myActivity.DisplayIntroMessage();
     }
 }
