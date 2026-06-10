@@ -31,6 +31,7 @@ public class Activity
             Thread.Sleep(1000);
             Console.Write("\b\b");
         }
+        Console.WriteLine("");
     }
 
     public void DisplayEndMessage(string activityName, int activityTime)
