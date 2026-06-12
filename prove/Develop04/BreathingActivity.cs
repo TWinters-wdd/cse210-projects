@@ -8,7 +8,16 @@ class BreathingActivity : Activity
     public void RunActivity()
     {
         StartActivity();
-        RunCountDown("Breathe In", 4);
-        RunCountDown("Breathe Out", 6);
+
+        DateTime currentTime = DateTime.Now;
+        DateTime endTime = currentTime.AddSeconds(GetDuration());
+
+        while (DateTime.Now < endTime)
+        {
+            RunCountDown("\nBreathe In: ", 4);
+            RunCountDown("Breathe Out: ", 6);            
+        }
+
+        EndActivity();
     }
 }
