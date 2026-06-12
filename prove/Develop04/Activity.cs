@@ -42,6 +42,7 @@ public class Activity
         RunSpinner(5);
 
         Console.WriteLine($"\nYou have completed {_duration} seconds of the {_name} Activity.");
+        RunSpinner(5);
     }
 
     public int GetDuration()
