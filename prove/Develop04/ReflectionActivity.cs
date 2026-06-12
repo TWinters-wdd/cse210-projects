@@ -30,7 +30,7 @@ class ReflectionActivity : Activity
         Console.ReadLine();
 
         Console.WriteLine("Now ponder on each of the following questions as they relate to this experience.");
-        RunCountDown("You may begin in: ", 5);
+        RunCountDown("You may begin in", 5);
         Console.Clear();
 
         DateTime currentTime = DateTime.Now;
