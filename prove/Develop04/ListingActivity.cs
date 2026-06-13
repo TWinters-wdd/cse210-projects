@@ -20,15 +20,29 @@ class ListingActivity : Activity
 
         DateTime currentTime = DateTime.Now;
         DateTime endTime = currentTime.AddSeconds(GetDuration());
+
         int itemsListed = 0;
+        List<String> answers = new List<String>();
+        string saveFile = "listening.txt";
 
         while (DateTime.Now < endTime)
         {
             Console.Write("> ");
-            Console.ReadLine();
+            string currentItem = Console.ReadLine();
+            answers.Add(currentItem);
             itemsListed++;
         }
+
         Console.WriteLine($"You listed {itemsListed} items!");
+        Console.Write("Do you want to save your list? [yes/no] ");
+        string userChoiceSave = Console.ReadLine();
+
+        if (userChoiceSave == "yes")
+        {
+            SaveToFile(answers, saveFile);
+            Console.WriteLine($"Answers saved to {saveFile}.");
+        }
+
         EndActivity();
     }
 
@@ -38,5 +52,13 @@ class ListingActivity : Activity
         int randomInt = random.Next(stringList.Count());
 
         return stringList[randomInt];
+    }
+
+    private void SaveToFile(List<String> infoToBeWritten, string saveFile)
+    {
+        foreach (string i in infoToBeWritten)
+        {
+            File.AppendAllText(saveFile, $"{i}\n");
+        }
     }
 }
