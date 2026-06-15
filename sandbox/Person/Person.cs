@@ -1,4 +1,4 @@
-class Person
+abstract class Person
 {
     private string _firstName;
     private string _lastName;
@@ -42,4 +42,6 @@ class Person
             Console.WriteLine("Incorrect weight");
         }
     }
+
+    public abstract double GetSalary();
 }

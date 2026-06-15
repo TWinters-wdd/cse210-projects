@@ -8,8 +8,8 @@
 
     public static void Main(string[] args)
     {
-        Person myPerson = new Person("Bob", "Roberts", 57, 198);
-        Console.WriteLine(myPerson.GetPersonInformation());
+        // Person myPerson = new Person("Bob", "Roberts", 57, 198);
+        // Console.WriteLine(myPerson.GetPersonInformation());
 
         Police myPoliceMan = new Police( "Gun", "Jonny", "Rich", 43, 187);
 
@@ -26,7 +26,7 @@
 
 
         List<Person> myPeople = new List<Person>();
-        myPeople.Add(myPerson);
+        // myPeople.Add(myPerson);
         myPeople.Add(myDoctor);
         myPeople.Add(myPoliceMan);
 
@@ -34,6 +34,7 @@
         {
             // Console.WriteLine(person.GetPersonInformation());
             DisplayPersonInformation(person);
+            Console.WriteLine(person.GetSalary());
         }
     }
 }
