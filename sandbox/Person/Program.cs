@@ -3,12 +3,7 @@
 
     public static void DisplayPersonInformation(Person person)
     {
-        if (person is Doctor doctor)
-            Console.WriteLine(doctor.GetDoctorInformation());
-        else if (person is Police police)
-            Console.WriteLine(police.GetPoliceManInformation());
-        else
-            Console.WriteLine(person.GetPersonInformation());
+        Console.WriteLine(person.GetPersonInformation());
     }
 
     public static void Main(string[] args)
@@ -18,16 +13,16 @@
 
         Police myPoliceMan = new Police( "Gun", "Jonny", "Rich", 43, 187);
 
-        Console.WriteLine(myPoliceMan.GetPoliceManInformation());
+        Console.WriteLine(myPoliceMan.GetPersonInformation());
 
         Doctor myDoctor = new Doctor("PhD", "John", "Billy", 44, 200);
 
-        Console.WriteLine(myDoctor.GetDoctorInformation());
+        Console.WriteLine(myDoctor.GetPersonInformation());
         myDoctor.ChangeWeight(10);
         myPoliceMan.ChangeWeight(-11);
 
-        Console.WriteLine(myDoctor.GetDoctorInformation());
-        Console.WriteLine(myPoliceMan.GetPoliceManInformation());
+        Console.WriteLine(myDoctor.GetPersonInformation());
+        Console.WriteLine(myPoliceMan.GetPersonInformation());
 
 
         List<Person> myPeople = new List<Person>();
