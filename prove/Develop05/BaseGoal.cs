@@ -1,5 +1,3 @@
-
-
 class BaseGoal
 {
     private string _name;
