@@ -19,11 +19,11 @@ class Program
         // myGoal.RecordEvent();
         // Console.WriteLine(myGoal.GetDisplayString());
 
-        EternalGoal myEternalGoal = new EternalGoal();
-        myEternalGoal.CreateGoal();
-        Console.WriteLine(myEternalGoal.GetDisplayString());
-        myEternalGoal.RecordEvent();
-        Console.WriteLine(myEternalGoal.GetDisplayString());
+        // EternalGoal myEternalGoal = new EternalGoal();
+        // myEternalGoal.CreateGoal();
+        // Console.WriteLine(myEternalGoal.GetDisplayString());
+        // myEternalGoal.RecordEvent();
+        // Console.WriteLine(myEternalGoal.GetDisplayString());
 
     }
 }
