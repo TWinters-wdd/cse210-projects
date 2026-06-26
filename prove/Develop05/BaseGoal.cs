@@ -1,10 +1,10 @@
 abstract class BaseGoal
 {
-    private string _name;
-    private string _description;
-    private int _numberOfPoints;
-    private bool _status;
-    private string _goalType;
+    protected string _name;
+    protected string _description;
+    protected int _numberOfPoints;
+    protected bool _status;
+    protected string _goalType;
 
     public BaseGoal()
     {
@@ -13,6 +13,15 @@ abstract class BaseGoal
         _numberOfPoints = 0;
         _status = false;
         _goalType = "";
+    }
+
+    public BaseGoal(string name, string description, int points, bool status, string goalType)
+    {
+        _name = name;
+        _description = description;
+        _numberOfPoints = points;
+        _status = status;
+        _goalType = goalType;
     }
 
     protected void SetName()
