@@ -3,15 +3,17 @@ class CheckListGoal : BaseGoal
     protected int _numberOfCompletions;
     protected int _maxGoals;
     protected int _bonusPoints;
+    protected int _totalPoints;
 
     public CheckListGoal() : base()
     {
         _numberOfCompletions = 0;
         _maxGoals = 0;
         _bonusPoints = 0;
+        _goalType = "ChecklistGoal";
     }
 
-    public CheckListGoal(string name, string description, int points, bool status, string goalType, int completions, int max, int bonus) : base(name, description, points, status, goalType)
+    public CheckListGoal(string name, string description, int points,string goalType, int completions, int max, int bonus) : base(name, description, points, goalType)
     {
         _numberOfCompletions = completions;
         _maxGoals = max;
@@ -43,7 +45,18 @@ class CheckListGoal : BaseGoal
     {
         if (_numberOfCompletions < _maxGoals)
         {
+            _totalPoints += _numberOfPoints;
             _numberOfCompletions++;
         }
+    }
+
+    public override string GetFileString()
+    {
+        return $"{base.GetFileString()}#{_bonusPoints}#{_maxGoals}#{_numberOfCompletions}";
+    }
+
+    public override string GetDisplayString()
+    {
+        return $"{base.GetDisplayString()} -- {_numberOfCompletions} / {_maxGoals}";
     }
 }

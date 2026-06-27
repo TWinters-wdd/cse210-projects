@@ -15,12 +15,11 @@ abstract class BaseGoal
         _goalType = "";
     }
 
-    public BaseGoal(string name, string description, int points, bool status, string goalType)
+    public BaseGoal(string name, string description, int points, string goalType)
     {
         _name = name;
         _description = description;
         _numberOfPoints = points;
-        _status = status;
         _goalType = goalType;
     }
 
@@ -52,10 +51,14 @@ abstract class BaseGoal
         return $"[{statusMarker}] Name: {_name}, Description: {_description}, Point Value: {_numberOfPoints}";
     }
 
-    protected int MarkComplete()
+    public virtual string GetFileString()
+    {
+        return $"{_goalType}#{_name}#{_description}#{_numberOfPoints}";
+    }
+
+    protected void MarkComplete()
     {
         _status = true;
-        return _numberOfPoints;
     }
 
     public abstract void CreateGoal();
