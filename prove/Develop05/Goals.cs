@@ -10,6 +10,11 @@ class Goals
         _goals.Add(goal);
     }
 
+    public List<BaseGoal> GetGoals()
+    {
+        return _goals;
+    }
+
     public void DisplayGoals()
     {
         Console.WriteLine("Your goals: ");
@@ -35,11 +40,22 @@ class Goals
         }
     }
 
+    public void DisplayScore()
+    {
+        Console.WriteLine($"You have {_totalScore} points.\n");
+    }
+
+    public void AddPoints(int points)
+    {
+        _totalScore += points;
+    }
+
     public void LoadGoals()
     {
         Console.Write("Load goals from which file: ");
         string inFile = Console.ReadLine();
         string[] lines = System.IO.File.ReadAllLines(inFile);
+        _totalScore = int.Parse(lines[0]);
         
         foreach (string line in lines)
         {

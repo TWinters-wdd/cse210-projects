@@ -1,7 +1,6 @@
 class EternalGoal : BaseGoal
 {
     private int _numberOfCompletions;
-    private int _totalPoints;
     public EternalGoal() : base()
     {
         _goalType = "EternalGoal";
@@ -20,11 +19,11 @@ class EternalGoal : BaseGoal
         SetNumberOfPoints();
     }
 
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
         MarkComplete();
-        _totalPoints += _numberOfPoints;
         _numberOfCompletions++;
+        return _numberOfPoints;
     }
 
     public override string GetDisplayString()

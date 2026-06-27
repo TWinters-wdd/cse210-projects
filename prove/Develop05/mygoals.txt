@@ -1,4 +1,3 @@
-0
-SimpleGoal#Finish this assignment#do it now#100#False
-EternalGoal#Read the scriptures#10 min daily#50#0
-ChecklistGoal#Attend the temple#1 every week#20#300#3#0
+160
+ChecklistGoal#Checklist Goal#testing checklist#10#100#3#3
+EternalGoal#Read scriptures#10 minutes daily#10#3

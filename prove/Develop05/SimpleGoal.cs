@@ -18,9 +18,10 @@ class SimpleGoal : BaseGoal
         SetNumberOfPoints();
     }
 
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
         MarkComplete();
+        return _numberOfPoints;
     }
 
     public override string GetFileString()

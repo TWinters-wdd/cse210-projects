@@ -3,7 +3,6 @@ class CheckListGoal : BaseGoal
     protected int _numberOfCompletions;
     protected int _maxGoals;
     protected int _bonusPoints;
-    protected int _totalPoints;
 
     public CheckListGoal() : base()
     {
@@ -41,12 +40,17 @@ class CheckListGoal : BaseGoal
         SetBonusPoints();
     }
 
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
+        _numberOfCompletions++;
         if (_numberOfCompletions < _maxGoals)
         {
-            _totalPoints += _numberOfPoints;
-            _numberOfCompletions++;
+            return _numberOfPoints;
+        }
+        else
+        {
+            MarkComplete();
+            return _numberOfPoints + _bonusPoints;
         }
     }
 
@@ -57,6 +61,6 @@ class CheckListGoal : BaseGoal
 
     public override string GetDisplayString()
     {
-        return $"{base.GetDisplayString()} -- {_numberOfCompletions} / {_maxGoals}";
+        return $"{base.GetDisplayString()} -- {_numberOfCompletions} / {_maxGoals} completed";
     }
 }
