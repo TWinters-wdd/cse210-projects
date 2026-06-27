@@ -8,7 +8,8 @@ class Menu
         Console.WriteLine("  3. Save Goals");
         Console.WriteLine("  4. Load Goals");
         Console.WriteLine("  5. Record Event");
-        Console.WriteLine("  6. Quit");
+        Console.WriteLine("  6. Remove Goal");
+        Console.WriteLine("  7. Quit");
         Console.Write("Select a choice from the menu: ");
 
         int userChoice = int.Parse(Console.ReadLine());

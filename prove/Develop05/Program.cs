@@ -54,8 +54,15 @@ class Program
                     goalList.AddPoints(addPoints);
 
                     break;
+                case 6:
+                    goalList.DisplayGoals();
+                    Console.Write("Which goal do you want to delete: ");
+                    int deletedGoal = int.Parse(Console.ReadLine()) - 1;
+
+                    goalList.GetGoals().RemoveAt(deletedGoal);
+                    break;
             }
         }
-        while (userChoice != 6);
+        while (userChoice != 7);
     }
 }
