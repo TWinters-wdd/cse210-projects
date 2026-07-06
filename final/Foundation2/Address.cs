@@ -13,6 +13,11 @@ public class Address
         _country = country;
     }
 
+    public Address()
+    {
+        
+    }
+
     public bool IsInUSA()
     {
         if (_country.ToUpper() == "USA")

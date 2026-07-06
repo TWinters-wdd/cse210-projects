@@ -9,5 +9,8 @@ class Program
 
         Address testAddress = new Address("234 N 83rd Avenue", "Lansing", "Michigan", "USA");
         Console.WriteLine(testAddress.GetAddressString());
+
+        Customer testCustomer = new Customer("John Doe", testAddress);
+        Console.WriteLine(testCustomer.GetCustomerString());
     }
 }
