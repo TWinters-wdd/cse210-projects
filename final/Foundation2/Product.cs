@@ -17,4 +17,9 @@ public class Product
     {
         return _pricePerUnit * _quantity;
     }
+
+    public string GetProductLabel()
+    {
+        return $"Product Name: {_name} - ID: {_id}";
+    }
 }
