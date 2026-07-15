@@ -1,9 +1,9 @@
-using System;
-
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Foundation4 World!");
+        Activity testActivity = new Activity("02/14/2026", 30);
+
+        Console.WriteLine(testActivity.GetSummary());
     }
 }
