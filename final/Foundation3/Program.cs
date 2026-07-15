@@ -10,6 +10,10 @@ class Program
         Address receptionAddress = new Address("88338 West Apples Lane", "New York City", "New York", 10074);
         ReceptionEvent receptionEvent = new ReceptionEvent("Wedding Reception", "Reception for Ash and Trev", "04/05/2025", "7:00 PM", receptionAddress, "Reception", "twin@gmail.com");
 
+        // Outdoor Event + Address
+        Address outdoorAddress = new Address("932 S 2nd Street", "Rexburg", "ID", 83440);
+        OutdoorEvent outdoorEvent = new OutdoorEvent("Ultimate Frisbee", "The 100th Annual Ultimate Frisbee Tournament for BYUI-Students", "08/20/2026", "11:00 AM", outdoorAddress, "Outdoor", "Sunny");
+
         // Lecture Event Display
         Console.WriteLine($"{lectureEvent.GetEventType()} Event Standard Display: ");
         lectureEvent.DisplayEventStandard();
@@ -34,5 +38,18 @@ class Program
 
         Console.WriteLine($"{receptionEvent.GetEventType()} Event Short Display: ");
         receptionEvent.DisplayEventShort();
-    }
+        Console.WriteLine();
+
+        // Outdoor Event Display
+        Console.WriteLine($"{outdoorEvent.GetEventType()} Event Standard Display: ");
+        outdoorEvent.DisplayEventStandard();
+        Console.WriteLine();
+
+        Console.WriteLine($"{outdoorEvent.GetEventType()} Event Full Display: ");
+        outdoorEvent.DisplayOutdoorEventDetails();
+        Console.WriteLine();
+
+        Console.WriteLine($"{outdoorEvent.GetEventType()} Event Short Display: ");
+        outdoorEvent.DisplayEventShort();
+    }   
 }
