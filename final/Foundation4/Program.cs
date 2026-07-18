@@ -2,7 +2,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Activity testActivity = new Activity("02/14/2026", 30);
+        Activity testActivity = new RunningActivity("10/20/2022", 30, 3);
 
         Console.WriteLine(testActivity.GetSummary());
     }
