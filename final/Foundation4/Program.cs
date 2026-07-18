@@ -2,8 +2,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Activity testActivity = new RunningActivity("10/20/2022", 30, 3);
+        RunningActivity runningActivity = new RunningActivity("03 Nov 2022", 30, 3);
+        BikingActivity bikingActivity = new BikingActivity("25 July 2026", 45, 25);
 
-        Console.WriteLine(testActivity.GetSummary());
+        // Console.WriteLine(runningActivity.GetSummary());
+        // Console.WriteLine(bikingActivity.GetSummary());
     }
 }
